@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">LeagueOfLegend</string>
+    <string name="button_addPromise">Add Promise</string>
 </resources>
