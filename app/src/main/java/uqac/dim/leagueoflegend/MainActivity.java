@@ -8,13 +8,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+import uqac.dim.leagueoflegend.room.AppDatabase;
+import uqac.dim.leagueoflegend.room.Promise;
 
 public class MainActivity extends AppCompatActivity {
+
+    private AppDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        db = AppDatabase.getInstance(this);
     }
 
     public void addPromise(View v){
@@ -26,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
 
         builder.setPositiveButton("Ajouter", (dialog, which) -> {
             Toast.makeText(this,editText.getText(),Toast.LENGTH_SHORT).show();
+            String stringPromise = String.valueOf(editText.getText());
+            Promise promise = new Promise(stringPromise);
+            db.promiseDao().addPromise(promise);
             dialog.cancel();
         });
         builder.setNegativeButton("Annuler", (dialog, which) -> {
