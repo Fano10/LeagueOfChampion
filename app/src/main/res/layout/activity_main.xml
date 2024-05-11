@@ -7,17 +7,17 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/button_addPromise"
-    android:text="@string/button_addPromise"
-    android:onClick="addPromise"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_addPromise"
+        android:text="@string/button_addPromise"
+        android:onClick="addPromise"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button_listPromise"
         android:text="@string/button_listPromise"
-        android:onClick="addPromise"/>
+        android:onClick="openActivityPromise"/>
 
 </LinearLayout>

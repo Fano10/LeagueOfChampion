@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,6 +15,7 @@ import androidx.annotation.NonNull;
 import java.util.List;
 
 import uqac.dim.leagueoflegend.R;
+import uqac.dim.leagueoflegend.activity.ActivityPromise;
 import uqac.dim.leagueoflegend.room.Promise;
 
 public class PromiseAdapter extends ArrayAdapter<Promise> {
